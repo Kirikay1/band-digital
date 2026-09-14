@@ -2,6 +2,8 @@
 
 Статическая frontend-версия будущей WordPress-темы.
 
+[Открыть сайт](https://kirikay1.github.io/band-digital/)
+
 ## Сборка стилей
 
 Установить зависимости:
