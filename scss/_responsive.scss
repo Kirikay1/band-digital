@@ -1,0 +1,135 @@
+/* Layout below Bootstrap's large breakpoint. */
+@media (width <= 991.98px) {
+    .navbar-toggler {
+        background: #fff;
+        border-radius: 0;
+    }
+
+    .navbar-toggler-icon {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .trans-navigation {
+        background: #232323;
+    }
+
+    .navbar-expand-lg.trans-navigation .navbar-nav .nav-link {
+        margin-bottom: 10px;
+    }
+
+    .section-heading {
+        width: 100%;
+    }
+
+    #intro {
+        padding-bottom: 90px;
+    }
+
+    .about-content {
+        margin-top: 60px;
+    }
+
+    #about {
+        padding-bottom: 40px;
+    }
+
+    .counter-stat {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .blog-text {
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    .blog-text p {
+        font-size: 14px;
+    }
+
+    .pricing-block,
+    .footer-widget {
+        margin-bottom: 30px;
+    }
+}
+
+/* Bootstrap's medium range. */
+@media (width >= 768px) and (width <= 991.98px) {
+    .about-bg-img {
+        width: 35%;
+        height: 100%;
+        max-height: 600px;
+    }
+}
+
+/* Small screens below Bootstrap's medium breakpoint. */
+@media (width <= 767.98px) {
+    .testimonial-content {
+        padding: 10px;
+    }
+
+    .blog-block {
+        margin-bottom: 30px;
+    }
+
+    .blog-block:hover {
+        box-shadow: none;
+    }
+
+    .blog-text h3 {
+        font-size: 16px;
+    }
+
+    .intro-box {
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+
+    .client-img {
+        text-align: center;
+    }
+
+    .img-block img {
+        width: 130px;
+    }
+}
+
+/* Extra-small screens below Bootstrap's small breakpoint. */
+@media (width <= 575.98px) {
+    .trans-navigation {
+        padding: 20px 15px;
+    }
+
+    #intro .section-heading p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .section-title {
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    h1 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .banner-content .banner-title {
+        line-height: 37px;
+    }
+
+    .banner-content p {
+        font-size: 16px;
+    }
+
+    .service-block {
+        margin-bottom: 20px;
+    }
+
+    .blog-text {
+        padding: 10px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,22 @@
+/* =======================================
+INner Pages
+========================================= */
+
+#page-banner {
+    position: relative;
+    padding: 60px 0 80px;
+}
+
+#page-banner > .overlay {
+    z-index: 0;
+}
+
+#page-banner > .container {
+    position: relative;
+    z-index: 1;
+}
+
+.page-banner-area {
+    background: url('../images/banner/1.webp') no-repeat 50% 50%;
+    background-size: cover;
+}

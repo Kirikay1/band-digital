@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 95">
+  <title>BrightGrid</title>
+  <g fill="#635cdb">
+    <rect x="16" y="29" width="12" height="12" rx="2"/>
+    <rect x="32" y="29" width="12" height="12" rx="2" opacity=".7"/>
+    <rect x="16" y="45" width="12" height="12" rx="2" opacity=".7"/>
+    <rect x="32" y="45" width="12" height="12" rx="2"/>
+  </g>
+  <text x="58" y="51" fill="#232323" font-family="Arial, sans-serif" font-size="18" font-weight="700">BRIGHT</text>
+  <text x="58" y="67" fill="#635cdb" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3">GRID</text>
+</svg>

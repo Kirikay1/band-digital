@@ -1,0 +1,183 @@
+@use '../variables' as *;
+
+/* ------------------------------------
+  MENU NAVIGATION AREA
+---------------------------------- */
+
+.site-navigation,
+.trans-navigation {
+    padding: 20px 0;
+    transition: background-color 0.5s ease;
+}
+
+.site-navigation .navbar-nav .nav-link,
+.trans-navigation .navbar-nav .nav-link {
+    text-transform: uppercase;
+}
+
+.site-navigation .navbar-nav a.active,
+.trans-navigation .navbar-nav a.active {
+    color: red;
+}
+
+.header-white {
+    position: fixed;
+    top: 0;
+    background: #111;
+    z-index: 9999;
+    width: 100%;
+    left: 0;
+    transition: background-color 0.5s ease;
+}
+
+.navbar-expand-lg.trans-navigation .navbar-nav .nav-link,
+.navbar-expand-lg.site-navigation .navbar-nav .nav-link {
+    padding: 0 24px;
+}
+
+.navbar-expand-lg.trans-navigation .navbar-nav .nav-link:last-child,
+.navbar-expand-lg.site-navigation .navbar-nav .nav-link:last-child {
+    padding-right: 0;
+}
+
+.navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding-block: 0;
+    margin-right: 60px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-transform: capitalize;
+    color: $light;
+}
+
+.navbar-brand span {
+    font-weight: 400;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: $light;
+}
+
+.navbar-expand-lg.trans-navigation .navbar-nav .nav-link {
+    color: $light;
+}
+
+.trans-navigation {
+    background: transparent;
+}
+
+.trans-navigation.header-white {
+    background: #111;
+}
+
+.trans-navigation.header-white .navbar-nav .nav-link {
+    color: $light;
+}
+
+.trans-navigation.header-white .navbar-nav a.active {
+    color: $primary-color;
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+}
+
+.navbar-toggler-icon .icon {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.navbar a:focus-visible,
+.navbar-toggler:focus-visible,
+.carousel-indicators button:focus-visible {
+    outline: 3px solid #ffbf47;
+    outline-offset: 4px;
+}
+
+.trans-navigation.header-white .btn-white {
+    background: $primary-color;
+    color: $light;
+}
+
+/* ===============================
+ DROPDOWN MENU
+================================ */
+
+.navbar-expand-lg.trans-navigation .navbar-nav .nav-link.dropdown-toggle {
+    padding-right: 0;
+}
+
+.nav-item.dropdown .dropdown-menu {
+    box-shadow:
+        2px 2px 5px 1px rgb(0, 0, 0, 0.05),
+        -2px 0 5px 1px rgb(0, 0, 0, 0.05);
+    border: 0;
+    padding: 0;
+}
+
+.dropdown-item:hover {
+    color: $light;
+    text-decoration: none;
+    background-color: $primary-color;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-menu {
+    opacity: 0;
+}
+
+.dropdown-menu.show {
+    animation: 0.2s forwards b;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dropdown-menu.show {
+        animation: none;
+        opacity: 1;
+    }
+}
+
+@keyframes b {
+    to {
+        opacity: 1;
+    }
+}
+
+.dropdown-item {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    transition: background-color 0.1s;
+    text-transform: uppercase;
+}
+
+@media (width <= 991.98px) {
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 24px;
+        z-index: 1000;
+        width: max-content;
+        min-width: 180px;
+        max-width: calc(100vw - 48px);
+        margin-top: 0;
+    }
+}
+
+@media (width >= 1200px) {
+    .dropdown-item {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .dropdown-menu li + li .dropdown-item {
+        border-top: 1px solid rgb(0, 0, 0, 0.1);
+    }
+}

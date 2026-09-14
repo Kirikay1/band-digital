@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 95">
+  <title>Nexora</title>
+  <g fill="none" stroke="#635cdb" stroke-width="5" stroke-linejoin="round">
+    <path d="M17 60V35l20-12 20 12v25L37 72 17 60Z"/>
+    <path d="m27 56 10-22 10 22"/>
+  </g>
+  <text x="70" y="56" fill="#232323" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="1">NEXORA</text>
+</svg>

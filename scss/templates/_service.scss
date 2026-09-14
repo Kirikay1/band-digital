@@ -1,0 +1,133 @@
+@use '../variables' as *;
+
+/* --------------------------
+  SERVICE AREA SECTION
+---------------------- */
+.page-banner-area.page-service {
+    background: url('../images/bg/bg-2.webp') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#service-head {
+    padding-bottom: 100px;
+    padding-top: 90px;
+}
+
+#service-head .section-title {
+    color: $light;
+}
+
+.text-white p {
+    color: $light;
+}
+
+#service {
+    margin-top: -100px;
+    padding-bottom: 70px;
+}
+
+#service.service-page-list {
+    margin-top: 0;
+    padding-top: 70px;
+}
+
+.service-box .service-img-icon {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    padding-top: 20px;
+    margin: 0 auto;
+    border-radius: 100%;
+    margin-bottom: 20px;
+    background: $primary-color;
+    border: 1px solid rgb(255, 255, 255, 0.2);
+    color: $light;
+}
+
+.service-box {
+    margin-bottom: 40px;
+    background: $light;
+    text-align: center;
+    padding: 45px 25px 30px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgb(0, 0, 0, 0.1);
+}
+
+.service-inner {
+    margin-top: 30px;
+}
+
+.service-inner h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    line-height: 32px;
+}
+
+.service-inner span {
+    color: $primary-color;
+}
+
+/* ================================
+SERVICE PAGE
+============================== */
+
+.bg-gray {
+    background: $secondary-color;
+}
+
+.service-block-2 {
+    position: relative;
+}
+
+.service-block-2 h4 {
+    margin-bottom: 15px;
+    line-height: 26px;
+}
+
+.service-block-2 p {
+    font-size: 16px;
+}
+
+.service-block-2 span {
+    position: absolute;
+    content: '';
+    font-size: 70px;
+    top: 0;
+    left: 0;
+    font-weight: 700;
+    opacity: 0.05;
+    margin-top: -15px;
+}
+
+.service-style-two {
+    background: url('../images/bg/bg-2.webp') no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.service-style-two::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.6);
+}
+
+.heading {
+    margin-bottom: 70px;
+}
+
+.service-style-two::before {
+    z-index: 0;
+    pointer-events: none;
+}
+
+.service-style-two > .container {
+    position: relative;
+    z-index: 1;
+}

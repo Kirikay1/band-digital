@@ -1,0 +1,39 @@
+{
+    "name": "band-digital-theme",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Frontend build tools for the Band Digital WordPress theme.",
+    "engines": {
+        "node": ">=24"
+    },
+    "scripts": {
+        "css:compile": "sass scss/style.scss css/style.css --style=expanded --source-map",
+        "css:prefix": "postcss css/style.css --replace --map",
+        "css:compile:production": "node -e \"require('node:fs').rmSync('css/style.min.css.map', { force: true })\" && sass scss/style.scss css/style.min.css --style=expanded --no-source-map",
+        "css:minify": "postcss css/style.min.css --replace --env production --no-map",
+        "build": "npm run css:compile && npm run css:prefix && npm run css:compile:production && npm run css:minify",
+        "watch": "sass --watch scss/style.scss:css/style.min.css --style=compressed --no-source-map",
+        "lint": "npm run lint:html && npm run lint:css && npm run format:check",
+        "lint:html": "html-validate \"*.html\"",
+        "lint:css": "stylelint \"scss/**/*.scss\"",
+        "lint:css:fix": "stylelint \"scss/**/*.scss\" --fix",
+        "format": "prettier --write \"*.html\" \"scss/**/*.scss\" \"js/**/*.js\" \"*.{json,cjs,md}\"",
+        "format:check": "prettier --check \"*.html\" \"scss/**/*.scss\" \"js/**/*.js\" \"*.{json,cjs,md}\""
+    },
+    "browserslist": [
+        "> 0.5%",
+        "last 2 versions",
+        "not dead"
+    ],
+    "devDependencies": {
+        "autoprefixer": "^10.6.0",
+        "cssnano": "^9.0.4",
+        "html-validate": "^11.15.0",
+        "postcss": "^8.5.28",
+        "postcss-cli": "^12.0.0",
+        "prettier": "^3.9.6",
+        "sass": "^1.104.1",
+        "stylelint": "^17.15.0",
+        "stylelint-config-standard-scss": "^17.0.0"
+    }
+}

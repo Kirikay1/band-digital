@@ -1,0 +1,154 @@
+@use '../variables' as *;
+
+/* --------------------------
+  ABOUT SECTION
+---------------------- */
+
+.section-pt {
+    padding-top: 90px;
+}
+
+.section-pb {
+    padding-bottom: 90px;
+}
+
+#about {
+    position: relative;
+    padding-bottom: 85px;
+}
+
+.about-bg-img {
+    position: absolute;
+    right: 0;
+    content: '';
+    background: url('../images/banner/1.webp') 78% 50% / cover no-repeat;
+    width: 40%;
+    height: 100%;
+    max-height: 560px;
+    top: 0;
+    box-shadow: 0 2px 48px 0 rgb(0, 0, 0, 0.06);
+}
+
+.about-content {
+    margin-top: 94px;
+}
+
+.about-content .subtitle {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about-content h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+    line-height: 38px;
+}
+
+.about-list {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+    gap: 15px;
+}
+
+.about-list li {
+    color: $black-lighter;
+}
+
+.about-list li .icon {
+    color: $black;
+    margin-right: 10px;
+}
+
+/* ----------------------
+ABOUT PAGE
+------------------------- */
+
+.about-list2 li .icon {
+    margin-right: 10px;
+    color: $primary-color;
+}
+
+.icon-3x {
+    font-size: 3rem;
+}
+
+.text-default {
+    color: $primary-color;
+}
+
+.team-social {
+    display: flex;
+    margin: 14px 0 0;
+    padding: 0;
+    list-style: none;
+    gap: 8px;
+}
+
+.team-social a {
+    display: grid;
+    width: 22px;
+    height: 22px;
+    color: $black;
+    place-items: center;
+    transition: color 0.25s ease;
+}
+
+.team-social a:hover {
+    color: $primary-color;
+}
+
+.team-social svg {
+    width: 14px;
+    height: 14px;
+    fill: currentcolor;
+}
+
+.team-social svg path:first-child:not(:last-child) {
+    fill: none;
+    stroke: currentcolor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.7;
+}
+
+/* ========================
+HISTORY MISSION
+============================== */
+
+.img-block img {
+    width: 200px;
+}
+
+/* ========================
+
+============================== */
+#section-strategy {
+    background: url('../images/bg/bg-1.webp') 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.strategy-text {
+    margin-bottom: 50px;
+}
+
+.strategy-title {
+    font-size: 18px;
+    margin: 1rem 0;
+    font-weight: 600;
+}
+
+.strategy-text span {
+    font-size: 61px;
+    color: $primary-color;
+    margin-bottom: 15px;
+    display: block;
+}
+
+#section-strategy .strategy-title {
+    color: $light;
+}
+
+#section-strategy .strategy-text p {
+    color: $light;
+}

@@ -1,0 +1,151 @@
+@use 'variables' as *;
+
+// Fonts
+
+@font-face {
+    font-family: Rubik;
+    src: url('../fonts/Rubik-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url('../fonts/Rubik-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url('../fonts/Rubik-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    font-family: $secondary-font;
+    font-synthesis: none;
+    color: #59686b;
+    position: relative;
+}
+
+p {
+    line-height: 28px;
+    font-size: 15px;
+}
+
+html {
+    overflow-x: clip;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-rendering: optimizelegibility;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-family: $primary-font;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: $black-light;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.2s;
+    color: $black;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a:hover {
+    color: #635cdb;
+    text-decoration: none;
+}
+
+a:focus {
+    text-decoration: none;
+}
+
+:where(a, button, input, textarea, select):focus-visible {
+    outline: 3px solid #ffbf47;
+    outline-offset: 3px;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1 {
+    font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+}
+
+h2 {
+    font-size: clamp(1.75rem, 1.5rem + 1vw, 2.25rem);
+}
+
+h3 {
+    font-size: clamp(1.375rem, 1.2rem + 0.75vw, 1.75rem);
+    line-height: 1.35;
+}
+
+h4 {
+    font-size: 22px;
+    line-height: 32px;
+}
+
+h5 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+h6 {
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.f-color {
+    color: #635cdb;
+}
+
+.subtitle {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.skip-link {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10000;
+    padding: 0.75rem 1rem;
+    background: $light;
+    color: $black;
+    border-radius: 4px;
+}

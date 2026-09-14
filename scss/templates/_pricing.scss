@@ -1,0 +1,114 @@
+@use '../variables' as *;
+
+/* ------------------------------------
+  PRICING SECTION AREA
+-------------------------------- */
+#pricing {
+    padding-bottom: 100px;
+}
+
+.pricing-block {
+    text-align: center;
+    transition:
+        background-color 0.4s ease,
+        box-shadow 0.4s ease;
+    border-radius: 5px;
+    border: 1px solid $border-color;
+}
+
+.price-header {
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.price-icon {
+    width: 100px;
+    height: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transition:
+        color 0.4s ease,
+        border-color 0.4s ease;
+    color: $primary-color;
+    border: 1px solid $border-color;
+}
+
+.price-icon::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-image: linear-gradient(135deg, #2f1ce0 0%, #53a0fd 50%, #51eca5 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.price-icon .icon {
+    position: relative;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+}
+
+.price-header .price {
+    font-size: clamp(3rem, 6vw, 4.375rem);
+    line-height: 1.2;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+.price-header .h5 {
+    font-weight: 400;
+}
+
+.price-header .price small {
+    font-size: 18px;
+}
+
+.pricing-block ul {
+    padding: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $border-color;
+}
+
+.pricing-block ul li {
+    padding: 6px 0;
+}
+
+.pricing-block .btn {
+    margin-bottom: 30px;
+}
+
+.pricing-block:hover .price-icon {
+    color: $light;
+    border: 1px solid #53a0fd;
+}
+
+.pricing-block:hover .price-icon::before {
+    opacity: 1;
+}
+
+.pricing-block:hover,
+.pricing-block.active {
+    background: $light;
+    box-shadow: 0 2px 48px 0 rgb(0, 0, 0, 0.06);
+}
+
+#pricing .section-heading {
+    margin-bottom: 90px;
+}
+
+/* -------------------
+PRICING PAGE
+-------------------- */
+
+#section-counter .counter-stat .icon {
+    color: #000;
+}
+
+#section-counter .counter-stat .h5 {
+    color: #777;
+}

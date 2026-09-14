@@ -1,0 +1,350 @@
+@use '../variables' as *;
+
+/* --------------------------
+ BLOG SECTION AREA
+---------------------- */
+#blog {
+    padding-bottom: 55px;
+}
+
+.blog-block {
+    overflow: hidden;
+}
+
+.blog-block img {
+    margin-bottom: 10px;
+}
+
+.blog-text {
+    padding: 20px;
+}
+
+.blog-text .author-name {
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.blog-text .author-name span {
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+.blog-block .read-more,
+.blog-block span {
+    color: $primary-color;
+}
+
+/* =================================
+BLOG PAGE
+=================================== */
+.blog-post {
+    margin-bottom: 50px;
+}
+
+.blog-post img {
+    border-radius: 5px;
+}
+
+.blog-post .post-author .icon,
+.blog-post .post-info .icon {
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.blog-post .post-author span,
+.blog-post .post-info time {
+    font-size: 14px;
+}
+
+.sidebar-widget {
+    margin-bottom: 40px;
+    padding-left: 20px;
+}
+
+.sidebar-search-widget {
+    padding-top: 1px;
+}
+
+.blog-search {
+    position: relative;
+}
+
+.blog-search .form-control {
+    width: 100%;
+    height: 50px;
+    padding: 0 52px 0 28px;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    background: $light;
+    font-size: 12px;
+    text-transform: uppercase;
+    box-shadow: none;
+}
+
+.blog-search .form-control:focus {
+    border-color: $primary-color;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.12);
+}
+
+.blog-search-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: grid;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: $primary-color;
+    place-items: center;
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.blog-search-button:hover {
+    color: #443cc7;
+    transform: scale(1.08);
+}
+
+.blog-search-button:focus-visible {
+    border-radius: 4px;
+    outline: 2px solid $primary-color;
+    outline-offset: -4px;
+}
+
+.blog-search-button svg {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: currentcolor;
+    stroke-linecap: round;
+    stroke-width: 2.5;
+}
+
+.blog-search-status {
+    margin: 12px 0 0;
+    font-size: 14px;
+}
+
+.category ul li {
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    position: relative;
+    padding-left: 20px;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 10px;
+}
+
+.category ul li::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0.45em;
+    width: 0.45em;
+    height: 0.45em;
+    border-top: 2px solid $primary-color;
+    border-right: 2px solid $primary-color;
+    transform: rotate(45deg);
+}
+
+.category a,
+.sidebar-links a {
+    color: $black-lighter;
+}
+
+.category a:hover,
+.sidebar-links a:hover {
+    color: $primary-color;
+}
+
+.sidebar-links li {
+    padding: 10px 0;
+    border-bottom: 1px solid $border-color;
+}
+
+.article-heading a {
+    color: inherit;
+    transition: color 0.25s ease;
+}
+
+.article-heading a:hover {
+    color: $primary-color;
+}
+
+.post-tag-list a {
+    color: inherit;
+    transition: color 0.25s ease;
+}
+
+.post-tag-list a:hover {
+    color: $primary-color;
+}
+
+.post-share {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.post-share .h5 {
+    margin: 0;
+}
+
+.post-share__links {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 8px;
+}
+
+.post-share__links a {
+    display: grid;
+    width: 22px;
+    height: 22px;
+    color: $black;
+    place-items: center;
+    transition: color 0.25s ease;
+}
+
+.post-share__links a:hover {
+    color: $primary-color;
+}
+
+.post-share__links svg {
+    width: 14px;
+    height: 14px;
+    fill: currentcolor;
+}
+
+.post-share__whatsapp-outline {
+    fill: none;
+    stroke: currentcolor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.7;
+}
+
+.tag-list,
+.download-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tag-list {
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tag-list a {
+    display: block;
+    padding: 7px 10px;
+    border: 1px solid $border-color;
+    color: $black-lighter;
+    font-size: 14px;
+    line-height: 1;
+    transition: color 0.25s ease;
+}
+
+.tag-list a:hover,
+.tag-list a:focus-visible {
+    color: $primary-color;
+}
+
+.tag-list a:focus-visible {
+    outline: 0;
+}
+
+.download-list {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.download-item {
+    display: flex;
+    min-height: 52px;
+    padding: 13px 16px;
+    background: #f2f2f2;
+    color: $black;
+    align-items: center;
+    gap: 12px;
+    transition: color 0.25s ease;
+}
+
+.download-item:hover,
+.download-item:focus-visible {
+    color: $primary-color;
+}
+
+.download-item:focus-visible {
+    outline: 0;
+}
+
+.download-item svg {
+    width: 21px;
+    height: 21px;
+    flex: 0 0 21px;
+    fill: none;
+    stroke: $primary-color;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+}
+
+/* ==================================
+BLOG SINGLE
+===================================== */
+
+.quote .icon {
+    font-size: 50px;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+}
+
+.quote {
+    font-size: 18px;
+    line-height: 32px;
+    color: #222;
+    position: relative;
+    margin: 50px 0;
+    padding-left: 70px;
+}
+
+.comments img {
+    width: 80px;
+    height: 80px;
+}
+
+@media (width <= 374.98px) {
+    .comment-entry {
+        flex-direction: column;
+    }
+
+    .comment-entry > img {
+        margin-right: 0 !important;
+        margin-bottom: 16px;
+    }
+}
+
+.comment-reply {
+    display: inline-flex;
+    color: $black;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.25s ease;
+}
+
+.comment-reply:hover {
+    color: $primary-color;
+}
+
+.comment-reply svg {
+    width: 16px;
+    height: 16px;
+    fill: currentcolor;
+}

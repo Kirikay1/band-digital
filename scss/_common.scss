@@ -1,0 +1,173 @@
+.container,
+.row {
+    --bs-gutter-x: 30px;
+}
+
+.content-flex {
+    min-width: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-offset, 100px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    fill: currentcolor;
+    vertical-align: -0.125em;
+    flex-shrink: 0;
+}
+
+.icon--quote-right {
+    transform: rotate(180deg);
+}
+
+.section-padding {
+    padding: clamp(60px, 7vw, 90px) 0;
+}
+
+.section-heading {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto 60px;
+}
+
+.section-title {
+    font-size: clamp(1.625rem, 1.4rem + 1vw, 2rem);
+    line-height: 1.2;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.section-title span {
+    color: #635cdb;
+}
+
+.section {
+    padding: clamp(70px, 8vw, 100px) 0;
+}
+
+.line {
+    width: 50px;
+    background: #635cdb;
+    height: 1px;
+    margin: 10px auto;
+}
+
+/* ---------- BUTTONS ---------- */
+
+.btn {
+    display: inline-block;
+    padding: 15px 45px;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+    border-radius: 0;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+.btn.btn-hero,
+.btn.btn-white:hover {
+    color: #fff;
+    background: #635cdb;
+}
+
+.btn.btn-hero:focus {
+    color: #fff;
+}
+
+.btn.btn-hero:hover {
+    background-color: rgb(0, 0, 0, 1);
+    color: #fff;
+}
+
+.btn-white {
+    background-color: rgb(255, 255, 255, 0.95);
+    color: rgb(0, 0, 0, 0.85);
+    border-color: rgb(255, 255, 255, 0.12);
+}
+
+.btn-white:focus {
+    color: #000;
+}
+
+.btn-white:active {
+    color: #fff;
+}
+
+.btn-circled {
+    border-radius: 40px;
+}
+
+/* ---------- COLORS ---------- */
+
+/* -- Background Colors -- */
+
+.bg-feature {
+    background-color: #635cdb;
+}
+
+.bg-gray {
+    background-color: #f2f4ec;
+}
+
+.d-table {
+    width: 100%;
+}
+
+.d-table-cell {
+    vertical-align: middle;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.brown-overlay {
+    background: #222955;
+    opacity: 0.97;
+}
+
+.feature-overlay {
+    background: #635cdb;
+    opacity: 0.97;
+}
+
+.gr-overlay {
+    background: linear-gradient(135deg, #2f1ce0 0%, #53a0fd 30%, #51eca5 100%);
+    opacity: 0.87;
+}
+
+/* ========================
+
+============================== */
+
+.heading {
+    margin-bottom: 40px;
+}
+
+.heading h3 {
+    margin-bottom: 10px;
+    font-weight: 600;
+}

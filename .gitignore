@@ -1,0 +1,18 @@
+node_modules/
+.sass-cache/
+css/*.map
+*.log
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Editor settings
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,57 @@
+@use '../variables' as *;
+
+/* --------------------------------
+ COUNTER SECTION
+----------------------------- */
+
+.counter {
+    font-size: clamp(2.5rem, 6vw, 3.75rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 10px 0;
+    color: $primary-color;
+}
+
+.counter-stat .icon {
+    font-size: 40px;
+    color: $light;
+    margin-right: 10px;
+}
+
+.counter-stat .h5 {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $light;
+}
+
+.counter-block span {
+    font-size: 30px;
+}
+
+#counter .dark-overlay {
+    background: $black;
+    opacity: 0.95;
+    z-index: 0;
+}
+
+#counter {
+    background-color: $primary-color;
+    background-image: radial-gradient(circle, rgb(255, 255, 255, 0.14) 1px, transparent 1px);
+    background-position: 50% 50%;
+    background-size: 24px 24px;
+    background-attachment: fixed;
+    position: relative;
+    padding-top: 87px;
+    padding-bottom: 95px;
+}
+
+#counter > .container {
+    position: relative;
+    z-index: 1;
+}
+
+@media (width <= 991.98px), (prefers-reduced-motion: reduce) {
+    #counter {
+        background-attachment: scroll;
+    }
+}

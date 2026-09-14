@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 95">
+  <title>Formline</title>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
+    <path d="m17 57 18-20 18 20" stroke="#635cdb"/>
+    <path d="m27 63 18-20 18 20" stroke="#232323"/>
+  </g>
+  <text x="75" y="56" fill="#232323" font-family="Arial, sans-serif" font-size="21" font-weight="700">FORMLINE</text>
+</svg>
