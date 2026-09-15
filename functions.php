@@ -3,6 +3,7 @@
 if (!function_exists('band_digital_setup')) {
   function band_digital_setup()
   {
+    // добавляем пользовательский логотип
     add_theme_support('custom-logo', [
       'height' => 60,
       'width' => 180,
@@ -11,6 +12,8 @@ if (!function_exists('band_digital_setup')) {
       'header-text' => '',
       'unlink-homepage-logo' => false, // WP 5.5
     ]);
+    //добавляем динамический тег тайтл
+    add_theme_support('title-tag');
   }
 
   add_action('after_setup_theme', 'band_digital_setup');
@@ -36,3 +39,19 @@ function band_digital_scripts()
   // band-digital js
   wp_enqueue_script('band-digital', get_template_directory_uri() . '/js/custom.js', ['bootstrap'], '1.0.0', true);
 }
+
+/**
+ * Регистрируем сразу несколько областей меню
+ */
+function band_digital_nav_menu($description)
+{
+  // собираем несколько зон (областей) меню
+  $location = array(
+    'header' => __('Header Menu', 'band-digital'),
+    'footer' => __('Footer Menu', 'band-digital'),
+  );
+  // регистрируем области меню, которые лежат в переменной $location
+  register_nav_menus($location);
+}
+// хук-событие
+add_action('init', 'band_digital_nav_menu');

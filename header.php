@@ -9,8 +9,6 @@
   <meta name="description"
     content="Band Digital — digital-агентство полного цикла: разработка сайтов, SEO, дизайн и интернет-маркетинг." />
 
-  <title>Band Digital — SEO и digital-агентство</title>
-
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
@@ -28,6 +26,7 @@
     Перейти к основному содержимому
   </a>
   <header>
+
     <nav class="navbar navbar-expand-lg fixed-top trans-navigation" aria-label="Основная навигация">
       <div class="container">
         <?php
