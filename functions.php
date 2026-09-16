@@ -14,6 +14,12 @@ if (!function_exists('band_digital_setup')) {
     ]);
     //добавляем динамический тег тайтл
     add_theme_support('title-tag');
+
+    // регистрируем несколько зон (областей) меню
+    register_nav_menus([
+      'header' => __('Header Menu', 'band-digital'),
+      'footer' => __('Footer Menu', 'band-digital'),
+    ]);
   }
 
   add_action('after_setup_theme', 'band_digital_setup');
@@ -40,18 +46,63 @@ function band_digital_scripts()
   wp_enqueue_script('band-digital', get_template_directory_uri() . '/js/custom.js', ['bootstrap'], '1.0.0', true);
 }
 
-/**
- * Регистрируем сразу несколько областей меню
- */
-function band_digital_nav_menu($description)
+add_filter('nav_menu_css_class', 'band_digital_menu_css_class', 10, 4);
+
+function band_digital_menu_css_class($classes, $item, $args, $depth)
 {
-  // собираем несколько зон (областей) меню
-  $location = array(
-    'header' => __('Header Menu', 'band-digital'),
-    'footer' => __('Footer Menu', 'band-digital'),
-  );
-  // регистрируем области меню, которые лежат в переменной $location
-  register_nav_menus($location);
+  if ($args->theme_location === 'header' && $depth === 0) {
+    $classes[] = 'nav-item';
+
+    if (in_array('menu-item-has-children', $classes, true)) {
+      $classes[] = 'dropdown';
+    }
+  }
+
+  return $classes;
 }
-// хук-событие
-add_action('init', 'band_digital_nav_menu');
+
+add_filter(
+  'nav_menu_submenu_css_class',
+  'band_digital_nav_menu_submenu_css_class',
+  10,
+  2
+);
+
+function band_digital_nav_menu_submenu_css_class($classes, $args)
+{
+  if ($args->theme_location === 'header') {
+    $classes[] = 'dropdown-menu';
+  }
+
+  return $classes;
+}
+
+add_filter(
+  'nav_menu_link_attributes',
+  'band_digital_nav_menu_link_attributes',
+  10,
+  4
+);
+
+function band_digital_nav_menu_link_attributes($atts, $item, $args, $depth)
+{
+  // Применяем только к меню в шапке
+  if ($args->theme_location !== 'header') {
+    return $atts;
+  }
+
+  if ($depth === 0) {
+    $atts['class'] = trim(($atts['class'] ?? '') . ' nav-link');
+
+    // Проверяем, есть ли у пункта вложенное меню
+    if (in_array('menu-item-has-children', $item->classes, true)) {
+      $atts['class'] .= ' dropdown-toggle';
+      $atts['data-bs-toggle'] = 'dropdown';
+      $atts['aria-expanded'] = 'false';
+    }
+  } else {
+    $atts['class'] = trim(($atts['class'] ?? '') . ' dropdown-item');
+  }
+
+  return $atts;
+}

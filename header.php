@@ -46,41 +46,17 @@
         </button>
 
         <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html" aria-current="page">
-                Главная
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <button class="nav-link dropdown-toggle" type="button" id="navbarWelcome" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                О нас
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="navbarWelcome">
-                <li>
-                  <a class="dropdown-item" href="about.html"> О компании </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="about.html#team">
-                    Наша команда
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="service.html">Услуги</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pricing.html">Цены</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="blog.html">Журнал</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Контакты</a>
-            </li>
-          </ul>
+          <?php
+          wp_nav_menu([
+            'theme_location' => 'header',
+            'container' => false,
+            'menu_class' => 'navbar-nav',
+            'menu_id' => false,
+            'echo' => true,
+            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+            'fallback_cb' => false,
+            'depth' => 2
+          ]); ?>
         </div>
       </div>
     </nav>
